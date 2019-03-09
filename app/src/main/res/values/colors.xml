@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d62e22</color>
+    <color name="colorPrimaryDark">#b71c1c</color>
+    <color name="colorAccent">#d62e22</color>
+    <color name="tripCardPlaceholderBackground">#E0E0E0</color>
+    <color name="tripCardBackgroundProtection">#30000000</color>
+    <color name="tripDetailBackgroundProtection">#80000000</color>
+</resources>

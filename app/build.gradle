@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 0
+ext.minSdkVersion = 16
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27'
+    defaultConfig {
+        applicationId "com.chihurumnanya.itransmit"
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion 27
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [google_geo_api_manifest_key: google_geo_api_manifest_key]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("${project.rootDir}/keys/temp_key_release.jks")
+            keyAlias 'alias_release'
+            keyPassword 'password_release'
+            storePassword 'password_release'
+        }
+        debug {
+            storeFile file("${project.rootDir}/keys/temp_key_debug.jks")
+            keyAlias 'alias_debug'
+            keyPassword 'password_debug'
+            storePassword 'password_debug'
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+private Integer generateVersionCode() {
+    return ext.minSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+private String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+      return versionName
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // Support
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:customtabs:27.0.2'
+    implementation 'com.android.support:cardview-v7:27.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+
+    // Google Play Services - Places
+    implementation 'com.google.android.gms:play-services-places:11.6.2'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-core:11.6.2'
+    implementation 'com.google.firebase:firebase-database:11.6.2'
+    implementation 'com.google.firebase:firebase-auth:11.6.2'
+    implementation 'com.google.android.gms:play-services-auth:11.6.2'
+    implementation 'com.firebaseui:firebase-ui-auth:3.1.0'
+    implementation 'com.firebaseui:firebase-ui-database:3.1.0'
+
+    // Butter Knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // Country Picker Android
+    implementation 'com.github.mukeshsolanki:country-picker-android:1.2.0'
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+
+    // jsoup HTML parser
+    implementation 'org.jsoup:jsoup:1.10.3'
+
+    // Joda-time
+    implementation 'joda-time:joda-time:2.9.9'
+
+    // FlexibleAdapter
+    implementation 'eu.davidea:flexible-adapter:5.0.0-rc3'
+    implementation 'eu.davidea:flexible-adapter-livedata:1.0.0-b1'
+    implementation 'eu.davidea:flexible-adapter-databinding:1.0.0-b2'
+
+    // CircleImageView for traveler photos
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    // Interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+    // EasyPermissions library for runtime permissions
+    implementation 'pub.devrel:easypermissions:1.0.1'
+
+    testImplementation 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'

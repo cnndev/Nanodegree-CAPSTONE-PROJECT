@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/factory_form_item_margin_top"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/destination_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/factory_form_destination_text_start_margin"
+            android:layout_marginStart="@dimen/factory_form_destination_text_start_margin"
+            android:text="@string/destination_footer_description"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/factory_form_icon_margin_horizontal"
+            android:layout_marginRight="@dimen/factory_form_icon_margin_horizontal"
+            android:contentDescription="@string/destination_icon"
+            android:src="@drawable/ic_destination"/>
+
+        <TextView
+            android:id="@+id/destination_text"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:drawableRight="@drawable/ic_arrow_drop_down"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:freezesText="true"
+            android:hint="@string/hint_where_are_you_going_required"/>
+    </LinearLayout>
+</LinearLayout>
