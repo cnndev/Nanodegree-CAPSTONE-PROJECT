@@ -10,6 +10,15 @@ iTransmit helps you organize your business and personal trips by recording your 
 • Never lost your data again: All your trip data is securely saved in the cloud
 
 
+Features 
+======
+● Store travel expenses with currency, image and location data  
+● Create individual budgets for each currency  
+● Create and manage multiple trips  
+● Automatically converts expenses to home country currency  
+● Create a travel itinerary and get directions to places when needed  
+
+
 Instructions
 ======
 
