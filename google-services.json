@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "822040183916",
+    "firebase_url": "https://itransmit-e5027.firebaseio.com",
+    "project_id": "itransmit-e5027",
+    "storage_bucket": "itransmit-e5027.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822040183916:android:182892bd5001811c",
+        "android_client_info": {
+          "package_name": "com.chihurumnanya.itransmit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822040183916-bi7562un5tik48iuetn9sqsjnk4on756.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chihurumnanya.itransmit",
+            "certificate_hash": "9805cb43b555864ca8e22dd16926cd5abdaf95c7"
+          }
+        },
+        {
+          "client_id": "822040183916-a0o9915v0qcqd358gk6nejjlo09uk1ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNtvJ_tuYlyJKPBxeKIjBFlV31i0Tn0lU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822040183916-a0o9915v0qcqd358gk6nejjlo09uk1ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
