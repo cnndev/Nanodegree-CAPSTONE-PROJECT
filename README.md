@@ -70,10 +70,6 @@ Firebase Realtime Database rules
 }
 ```
 
-Google Map Api 
-======
-google_geo_api_manifest_key=<AIzaSyCNtvJ_tuYlyJKPBxeKIjBFlV31i0Tn0lU>
-
 License
 ------
 
